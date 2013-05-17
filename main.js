@@ -1,6 +1,5 @@
 window.onload = function () {
 	$.getJSON('/formulae.json?' + Date.now(), function (formulae) {
-		console.log(formulae);
 		$.each(formulae, function (idx, formula) {
 			var from = [];
 			$(formula.from).each(function (i, name) {
@@ -20,8 +19,8 @@ window.onload = function () {
 
 	function drawWorld() {
 		var world = d3.selectAll('#world').append('svg:svg');
-		var width = '100%', height = 1000, elementRadius = 10;
-		var lineColors = ['purple', '#37a5af', '#ed9877', '#5e5a79', 'red', 'purple'];
+		var width = '100%', height = 1300, elementRadius = 10;
+		var lineColors = ['purple', '#37a5af', '#ed9877', '#5e5a79'];
 
 		world.attr('width', width)
 	  	.attr('height', height);
@@ -51,7 +50,7 @@ window.onload = function () {
 							.on('mouseover', function () {
 								d3.select(this).transition().attr('r', elementRadius + 5).duration(1000).ease("elastic", 2);
 								$(elem.from()).each(function (idx) {
-									d3.selectAll('[class~="' + elem.name().replace(' ', '-') + '-' + idx + '"]')
+									d3.selectAll('[class~="' + elem.name().replace(/\s/g, '-') + '-' + idx + '"]')
 										.transition()
 										.style('stroke-width', '5px')
 										.style('stroke', lineColors[idx]);
@@ -60,7 +59,7 @@ window.onload = function () {
 							.on('mouseout', function () {
 								d3.select(this).transition().attr('r', elementRadius).ease("elastic");
 								$(elem.from()).each(function (idx) {
-									d3.selectAll('[class~="' + elem.name().replace(' ', '-') + '-' + idx + '"]')
+									d3.selectAll('[class~="' + elem.name().replace(/\s/g, '-') + '-' + idx + '"]')
 										.transition()
 										.style('stroke-width', '2px')
 										.style('stroke', '#ddd');
@@ -85,7 +84,7 @@ window.onload = function () {
 			  		path += 'L' + elemPosition.x + ',' + elemPosition.y ;
 
 			  		lines.append('svg:path')
-				  		.attr('class', 'link' + ' ' + elem.name().replace(' ', '-') + '-' + fromIndex)
+				  		.attr('class', 'link' + ' ' + elem.name().replace(/\s/g, '-') + '-' + fromIndex)
 				  		.attr('id', 'path')
 					    .attr('d', path);
 			  	});
