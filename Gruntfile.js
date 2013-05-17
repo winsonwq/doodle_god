@@ -18,6 +18,15 @@ module.exports = function(grunt) {
         src: ['test/**/*.js']
       },
     },
+    connect: {
+      server: {
+        options: {
+          port: 9000,
+          base: '',
+          keepalive: true
+        }
+      }
+    },
     jasmine: {
       pivotal: {
         src: 'lib/*.js',
@@ -47,6 +56,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'jasmine:pivotal']);
