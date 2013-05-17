@@ -1,0 +1,8 @@
+{
+  "name": "doodle_god",
+  "version": "0.0.1",
+  "dependencies": {
+    "d3": "*",
+    "jquery": ">1.9.0"
+  }
+}

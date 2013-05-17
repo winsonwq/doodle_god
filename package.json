@@ -1,0 +1,39 @@
+{
+  "name": "doodle_god",
+  "description": "doodle god",
+  "version": "0.1.0",
+  "homepage": "https://github.com/tw/doodle_god",
+  "author": {
+    "name": "Wang Qiu",
+    "email": "winsonwq@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tw/doodle_god.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tw/doodle_god/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/tw/doodle_god/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/doodle_god",
+  "engines": {
+    "node": "0.6.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt-contrib-jasmine": "*",
+    "grunt": "~0.4.1",
+    "chai": "*"
+  },
+  "keywords": []
+}

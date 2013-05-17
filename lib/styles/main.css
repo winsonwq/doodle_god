@@ -1,0 +1,22 @@
+svg {
+	font: 14px sans-serif;
+}
+
+path.link {
+	stroke: #ddd;
+	stroke-width: 2px;
+	cursor: default;
+	fill: transparent;
+}
+
+circle.node {
+	stroke: #777;
+	stroke-width: 1px;
+	fill: yellowgreen;
+  cursor: pointer;
+}
+
+text.element-name {
+	text-anchor: middle;
+	cursor: pointer;
+}
