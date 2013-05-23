@@ -177,7 +177,7 @@
 {"from": ["Human", "Reed"], "to": ["Music"]},
 {"from": ["Human", "Sex"], "to": ["Fun"]},
 {"from": ["Human", "Music"], "to": ["Fun"]},
-{"from": ["Bacteria", "Virus"], "to": ["Antibiotics"]},
+{"from": ["Bacteria", "Medicine"], "to": ["Antibiotics"]},
 {"from": ["Computer", "Virus"], "to": ["Hacker"]},
 {"from": ["House", "Money"], "to": ["Bank"]},
 {"from": ["Coffee", "Vodka"], "to": ["B52"]},
